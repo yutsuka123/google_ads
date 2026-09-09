@@ -148,8 +148,18 @@
       localStorage.setItem('nyangailab.lang', lang);
     }
 
+    function detectLang(){
+      const langs = (navigator.languages && navigator.languages.length)
+        ? navigator.languages
+        : [navigator.language || navigator.userLanguage || 'en'];
+      for (const l of langs) {
+        if (/^ja/i.test(l)) return 'ja';
+      }
+      return 'en';
+    }
+
     const saved = localStorage.getItem('nyangailab.lang');
-    const initial = saved || 'en';
+    const initial = saved || detectLang();
     $('#lang').value = initial;
     applyLang(initial);
     $('#lang').addEventListener('change', (e)=> applyLang(e.target.value));
