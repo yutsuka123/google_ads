@@ -47,3 +47,35 @@ footer .container{display:flex; align-items:center; justify-content:space-betwee
 .doc .meta{color:var(--muted); font-size:13px; margin:0 0 22px}
 html[lang="ja"] .en{display:none}
 html:not([lang="ja"]) .ja{display:none}
+
+/* 章立て（Android アプリ／Web アプリ／About） */
+html{scroll-padding-top:84px}
+.sec{max-width:980px; margin:60px auto 0}
+.sec:first-of-type{margin-top:28px}
+.sec-head{display:flex; align-items:baseline; flex-wrap:wrap; gap:6px 14px; padding-bottom:12px; border-bottom:2px solid rgba(255,255,255,.08); position:relative}
+.sec-head::after{content:""; position:absolute; left:0; bottom:-2px; width:110px; height:2px; background:linear-gradient(90deg,#4bb3fd,#6de39f)}
+.sec-head h2{margin:0; font-size:30px; line-height:1.2}
+.sec-sub{margin:0; color:var(--muted); font-size:14px}
+.chip{align-self:center; padding:3px 12px; border-radius:999px; font-size:12px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:#001018; background:linear-gradient(135deg,#6de39f,#4bb3fd)}
+.chip.web{background:linear-gradient(135deg,#4bb3fd,#b69bff)}
+.chip.about{background:linear-gradient(135deg,#ffd27a,#ff9b7a)}
+.sub-h{font-size:22px; margin:34px 0 6px}
+.sec .apps{margin:22px 0 0}
+
+/* Android アプリのカード（アイコン＋画面） */
+.appvis{display:flex; align-items:center; justify-content:center; gap:18px; height:220px; margin-bottom:16px; border-radius:12px; background:radial-gradient(circle at 30% 30%, rgba(52,190,190,.35), rgba(18,24,33,.2) 70%)}
+.appicon{width:124px; height:124px; border-radius:28px; box-shadow:0 10px 26px rgba(0,0,0,.45)}
+.appshot{height:190px; width:auto; border-radius:14px; border:3px solid rgba(255,255,255,.16); box-shadow:0 10px 26px rgba(0,0,0,.45)}
+
+/* Web アプリ: 図のギャラリー（画像＋題名だけ） */
+.gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; margin-top:16px}
+.fig{display:block; overflow:hidden; border:1px solid rgba(255,255,255,.1); border-radius:14px; background:var(--card); color:var(--text); text-decoration:none; box-shadow:0 10px 30px rgba(0,0,0,.25); transition:transform .15s ease, border-color .15s ease}
+.fig:hover,.fig:focus-visible{transform:translateY(-3px); border-color:rgba(75,179,253,.65)}
+.fig img{display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; background:#0b0f14}
+.fig .cap{display:block; padding:11px 14px 13px; font-weight:600; font-size:15px; line-height:1.4}
+.webcard{display:grid; grid-template-columns:1fr; gap:18px; align-items:center; margin-top:14px}
+.webimg{display:block; overflow:hidden; border-radius:12px; border:1px solid rgba(255,255,255,.1)}
+.webimg img{display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover}
+@media(min-width:720px){ .webcard{grid-template-columns:1fr 1fr} }
+@media(prefers-reduced-motion:reduce){ .fig{transition:none} .fig:hover{transform:none} }
+@media(max-width:560px){ .gallery{grid-template-columns:repeat(2,1fr); gap:10px} .fig .cap{padding:8px 10px 10px; font-size:13px} .sec-head h2{font-size:26px} }

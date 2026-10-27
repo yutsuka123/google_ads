@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-adsense-account" content="ca-pub-8905534727976250">
   <title>Nyangailab — Developer Page</title>
-  <meta name="description" content="Nyangailab: Android apps, an English learning web app, and Science Lab — interactive physics simulations, starting with electromagnetism. Bilingual (EN/日本語)." />
+  <meta name="description" content="Nyangailab: Android apps, and web apps that run in your browser — Science Lab (interactive physics simulations, starting with electromagnetism) and an English learning app. Bilingual (EN/日本語)." />
   <link rel="stylesheet" href="site.css" />
 </head>
 <body>
@@ -13,8 +13,8 @@
     <div class="container row">
       <a class="brand" href="./"><i></i> <span>Nyangailab</span></a>
       <nav class="nav">
-        <a href="#apps" data-i18n="navApps">Apps</a>
-        <a href="#science" data-i18n="navScience">Science Lab</a>
+        <a href="#android" data-i18n="navAndroid">Android apps</a>
+        <a href="#web" data-i18n="navWeb">Web apps</a>
         <a href="about.html" data-i18n="navAbout">About</a>
         <a href="privacy.html" data-i18n="navPrivacy">Privacy</a>
       </nav>
@@ -34,69 +34,120 @@
       <p data-i18n="sub">Android apps, an English learning web app, and Science Lab — physics you can operate. Simple, privacy‑minded, and made by an independent developer.</p>
     </section>
 
-    <section class="apps" id="apps">
-      <article class="card">
-        <h3>Cat Math Block</h3>
-        <p data-i18n="app1Desc">A casual block puzzle with cute cats and basic math practice.</p>
-        <div class="actions">
-          <a class="btn primary" href="https://play.google.com/store/apps/details?id=nyangailab.com.cat_block" target="_blank" rel="noopener">Google Play</a>
-          <a class="btn" href="https://nyangailab.com/app-ads.txt" target="_blank" rel="noopener">app-ads.txt</a>
-        </div>
-      </article>
+    <!-- 1. Android アプリ -->
+    <section class="sec" id="android">
+      <div class="sec-head">
+        <span class="chip">Android</span>
+        <h2 data-i18n="secAndroid">Android apps</h2>
+        <p class="sec-sub" data-i18n="secAndroidSub">Install from Google Play.</p>
+      </div>
+      <div class="apps">
+        <article class="card appcard">
+          <div class="appvis">
+            <img class="appicon" src="img/app-cat-icon.webp" width="256" height="256" alt="Cat Math Block app icon" loading="lazy" />
+            <img class="appshot" src="img/app-cat-shot.webp" width="173" height="360" alt="Cat Math Block screenshot" loading="lazy" />
+          </div>
+          <h3>Cat Math Block</h3>
+          <p data-i18n="app1Desc">A casual block puzzle with cute cats and basic math practice.</p>
+          <div class="actions">
+            <a class="btn primary" href="https://play.google.com/store/apps/details?id=nyangailab.com.cat_block" target="_blank" rel="noopener">Google Play</a>
+          </div>
+        </article>
 
-      <article class="card">
-        <h3>Nyan Calc</h3>
-        <p data-i18n="app2Desc">A lightweight calculator app with a friendly UI.</p>
-        <div class="actions">
-          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.nyangailab.nyancalc" target="_blank" rel="noopener">Google Play</a>
-        </div>
-      </article>
+        <article class="card appcard">
+          <div class="appvis">
+            <img class="appicon" src="img/app-calc-icon.webp" width="256" height="256" alt="Nyan Calc app icon" loading="lazy" />
+            <img class="appshot" src="img/app-calc-shot.webp" width="196" height="360" alt="Nyan Calc screenshot" loading="lazy" />
+          </div>
+          <h3>Nyan Calc</h3>
+          <p data-i18n="app2Desc">A lightweight calculator app with a friendly UI.</p>
+          <div class="actions">
+            <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.nyangailab.nyancalc" target="_blank" rel="noopener">Google Play</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="card wide" id="science" style="border-color:rgba(109,227,159,.35);">
-      <h3 data-i18n="sciTitle" style="margin-top:0">Science Lab — physics you can operate</h3>
-      <p data-i18n="sciIntro">An educational site that lets you move, change and measure natural phenomena in the browser instead of only reading about them. It starts with electromagnetism: from what an electric current really is, through Maxwell's equations, to antennas, lightning and semiconductors.</p>
-      <ul class="topics">
-        <li><a href="https://science.nyangailab.com/physics/em/current/" target="_blank" rel="noopener" data-i18n="sciT1">What electric current really is</a>
-          <span data-i18n="sciD1">Electrons do not simply rush along a wire: an electric field spreads, and the electrons start to move. Compare the speed of light with the speed of the electrons.</span></li>
-        <li><a href="https://science.nyangailab.com/physics/em/current/view2d.html" target="_blank" rel="noopener" data-i18n="sciT2">Fields spreading as circles (2D and 3D)</a>
-          <span data-i18n="sciD2">Maxwell's equations solved numerically in a cross-section of a wire: when current starts to flow, electric and magnetic fields spread out as circles. A 3D view lets you change the viewpoint and zoom.</span></li>
-        <li><a href="https://science.nyangailab.com/physics/em/current/static.html" target="_blank" rel="noopener" data-i18n="sciT3">Electric field lines and equipotentials</a>
-          <span data-i18n="sciD3">Around two point charges the field lines and equipotential lines always cross at right angles. Change the charge ratio and watch the "potential landscape".</span></li>
-        <li><a href="https://science.nyangailab.com/physics/em/current/vector.html" target="_blank" rel="noopener" data-i18n="sciT4">Vector calculus (∇, gradient, divergence, curl)</a>
-          <span data-i18n="sciD4">A review of derivatives and integrals, then ∇, gradient, divergence, curl, the Laplacian, the divergence and Stokes theorems, and cylindrical and spherical coordinates — with figures and step-by-step equations. The gradient and curl chapters have 3D figures you can move with the mouse or a finger.</span></li>
-        <li><a href="https://science.nyangailab.com/physics/em/current/maxwell.html" target="_blank" rel="noopener" data-i18n="sciT9">Maxwell's equations</a>
-          <span data-i18n="sciD9">Gauss's laws for electric and magnetic fields, Faraday's law and the Ampère–Maxwell law (displacement current), with figures, step-by-step equations and numbers. From the four equations we derive the electromagnetic wave equation, the speed of light c = 1/√(μ₀ε₀), and energy conservation (Poynting's theorem).</span></li>
-        <li><a href="https://science.nyangailab.com/physics/em/current/antenna.html" target="_blank" rel="noopener" data-i18n="sciT5">Antennas</a>
-          <span data-i18n="sciD5">How electrons oscillating in a conductor become radio waves, and how antenna length changes the radiation pattern and radiation resistance.</span></li>
-        <li><a href="https://science.nyangailab.com/physics/em/current/lightning.html" target="_blank" rel="noopener" data-i18n="sciT6">Lightning and lightning rods</a>
-          <span data-i18n="sciD6">Why the electric field concentrates at a thin tip, and whether it reaches the breakdown threshold of air, computed from an exact solution.</span></li>
-        <li><a href="https://science.nyangailab.com/physics/em/current/semicon.html" target="_blank" rel="noopener" data-i18n="sciT7">Inside a semiconductor</a>
-          <span data-i18n="sciD7">Electrons and holes in a PN junction, a diode and a transistor, from a one-dimensional drift–diffusion model solved numerically and checked against analytic results.</span></li>
-        <li><a href="https://science.nyangailab.com/physics/em/current/circuitlab.html" target="_blank" rel="noopener" data-i18n="sciT8">Circuit editor</a>
-          <span data-i18n="sciD8">Place batteries, AC sources, resistors, capacitors, coils, transformers, diodes and transistors, then see current, voltage, fields and electron motion at the same time.</span></li>
-      </ul>
-      <p class="note" data-i18n="sciNote">Science Lab is an early-access (alpha) release. Its pages are labelled as not yet reviewed, and we correct them as we check. The pages are currently written in Japanese.</p>
-      <div class="actions">
+    <!-- 2. ブラウザで動く Web アプリ -->
+    <section class="sec" id="web">
+      <div class="sec-head">
+        <span class="chip web">Web</span>
+        <h2 data-i18n="secWeb">Web apps</h2>
+        <p class="sec-sub" data-i18n="secWebSub">Run in your browser — nothing to install.</p>
+      </div>
+
+      <h3 class="sub-h" id="science" data-i18n="sciTitle">Science Lab — physics you can operate</h3>
+      <p class="note" data-i18n="sciIntro">Move, change and measure natural phenomena in your browser. It starts with electromagnetism.</p>
+      <div class="gallery">
+        <a class="fig" href="https://science.nyangailab.com/physics/em/current/circuitlab.html" target="_blank" rel="noopener">
+          <img src="img/sci-circuit.webp" width="720" height="405" loading="lazy" alt="A circuit diagram in motion: a power plant, transformers and a 100 km transmission line feeding a home" data-i18n-alt="sciA1" />
+          <span class="cap" data-i18n="sciT1">Moving circuit diagram</span>
+        </a>
+        <a class="fig" href="https://science.nyangailab.com/physics/em/current/antenna.html" target="_blank" rel="noopener">
+          <img src="img/sci-antenna.webp" width="720" height="405" loading="lazy" alt="Electric field lines pinching off around an oscillating antenna and travelling outward as radio waves" data-i18n-alt="sciA2" />
+          <span class="cap" data-i18n="sciT2">Antennas</span>
+        </a>
+        <a class="fig" href="https://science.nyangailab.com/physics/em/current/view2d.html" target="_blank" rel="noopener">
+          <img src="img/sci-field2d.webp" width="720" height="405" loading="lazy" alt="Electric and magnetic fields spreading as rings around two wires carrying current" data-i18n-alt="sciA3" />
+          <span class="cap" data-i18n="sciT3">Fields spreading as circles</span>
+        </a>
+        <a class="fig" href="https://science.nyangailab.com/physics/em/current/lightning.html" target="_blank" rel="noopener">
+          <img src="img/sci-lightning.webp" width="720" height="405" loading="lazy" alt="A lightning leader coming down toward a lightning rod, with electric field lines and equipotential lines" data-i18n-alt="sciA4" />
+          <span class="cap" data-i18n="sciT4">Lightning and lightning rods</span>
+        </a>
+        <a class="fig" href="https://science.nyangailab.com/physics/em/current/static.html" target="_blank" rel="noopener">
+          <img src="img/sci-static.webp" width="720" height="405" loading="lazy" alt="Electric field lines and equipotential lines around two point charges" data-i18n-alt="sciA5" />
+          <span class="cap" data-i18n="sciT5">Electric field lines and equipotentials</span>
+        </a>
+        <a class="fig" href="https://science.nyangailab.com/physics/em/current/semicon.html" target="_blank" rel="noopener">
+          <img src="img/sci-semicon.webp" width="720" height="405" loading="lazy" alt="Electrons and holes as moving dots on either side of a PN junction" data-i18n-alt="sciA6" />
+          <span class="cap" data-i18n="sciT6">Inside a semiconductor</span>
+        </a>
+        <a class="fig" href="https://science.nyangailab.com/physics/em/current/" target="_blank" rel="noopener">
+          <img src="img/sci-current.webp" width="720" height="405" loading="lazy" alt="A battery and a bulb joined by two wires, with the electrons in the wires shown as moving dots" data-i18n-alt="sciA7" />
+          <span class="cap" data-i18n="sciT7">What electric current really is</span>
+        </a>
+        <a class="fig" href="https://science.nyangailab.com/physics/em/current/vector.html" target="_blank" rel="noopener">
+          <img src="img/sci-vector.webp" width="720" height="405" loading="lazy" alt="A 3D surface with contour lines and an arrow pointing uphill" data-i18n-alt="sciA8" />
+          <span class="cap" data-i18n="sciT8">Vector calculus (∇, gradient, divergence, curl)</span>
+        </a>
+        <a class="fig" href="https://science.nyangailab.com/physics/em/current/maxwell.html" target="_blank" rel="noopener">
+          <img src="img/sci-maxwell.webp" width="720" height="405" loading="lazy" alt="An electromagnetic wave in 3D: the electric field (red) and the magnetic field (blue) at right angles" data-i18n-alt="sciA9" />
+          <span class="cap" data-i18n="sciT9">Maxwell's equations</span>
+        </a>
+      </div>
+      <div class="actions" style="margin-top:16px">
         <a class="btn primary" href="https://science.nyangailab.com/physics/em/index.html" target="_blank" rel="noopener" data-i18n="sciCta">Open the Electromagnetism contents</a>
         <a class="btn" href="https://science.nyangailab.com/" target="_blank" rel="noopener" data-i18n="sciHome">science.nyangailab.com</a>
       </div>
+      <p class="note small" data-i18n="sciNote">Science Lab is an early-access (alpha) release. Its pages are labelled as not yet reviewed, and we correct them as we check. The pages are currently written in Japanese.</p>
+
+      <h3 class="sub-h" id="english" data-i18n="webappTitle">English learning web app</h3>
+      <article class="card webcard">
+        <a class="webimg" href="https://study.nyangailab.com" target="_blank" rel="noopener">
+          <img src="img/web-english.webp" width="720" height="405" loading="lazy" alt="The English learning web app: lessons in vocabulary, phrases, quizzes and more" data-i18n-alt="webappAlt" />
+        </a>
+        <div>
+          <p data-i18n="webappDesc">No subscription — prepaid, pay only for what you use. 16,000+ words, 7,500+ phrases and 230+ topics, from everyday English to specialist vocabulary.</p>
+          <div class="actions">
+            <a class="btn primary" href="https://study.nyangailab.com" target="_blank" rel="noopener" data-i18n="webappCta">Visit study.nyangailab.com</a>
+            <a class="btn" href="https://study.nyangailab.com/glossary" target="_blank" rel="noopener" data-i18n="webappGlossary">English vocabulary by field</a>
+            <a class="btn" href="https://study.nyangailab.com/phrasebook" target="_blank" rel="noopener" data-i18n="webappPhrasebook">English phrases by situation</a>
+          </div>
+        </div>
+      </article>
     </section>
 
-    <section class="card wide" style="border-color:rgba(75,179,253,.35);">
-      <h3 data-i18n="webappTitle" style="margin-top:0">Also from us: an English learning web app</h3>
-      <p data-i18n="webappDesc">No subscription — pay only for what you use. 13,000+ words and phrases across 200+ niche domains, from everyday English to specialist vocabulary.</p>
-      <div class="actions">
-        <a class="btn primary" href="https://study.nyangailab.com" target="_blank" rel="noopener" data-i18n="webappCta">Visit study.nyangailab.com</a>
-        <a class="btn" href="https://study.nyangailab.com/glossary" target="_blank" rel="noopener" data-i18n="webappGlossary">English vocabulary by field</a>
-        <a class="btn" href="https://study.nyangailab.com/phrasebook" target="_blank" rel="noopener" data-i18n="webappPhrasebook">English phrases by situation</a>
+    <!-- 3. 私たちについて -->
+    <section class="sec" id="about">
+      <div class="sec-head">
+        <span class="chip about">About</span>
+        <h2 data-i18n="aboutTitle">About Nyangailab</h2>
       </div>
-    </section>
-
-    <section class="card wide">
-      <h3 data-i18n="aboutTitle" style="margin-top:0">About Nyangailab</h3>
-      <p data-i18n="aboutBody">We build small, delightful Android apps. Our priorities are clarity, low battery usage, and keeping personal data on the device whenever possible.</p>
-      <p data-i18n="aboutMore" style="margin-bottom:0">Nyangailab is an independent developer in Tokyo. Besides the apps, we make web tools for learning: Science Lab for physics and an English learning app. See the About page for how we work and how to reach us, and the Privacy page for how data is handled.</p>
+      <div class="card" style="margin-top:20px">
+        <p data-i18n="aboutBody" style="margin-top:0">We build small, delightful Android apps. Our priorities are clarity, low battery usage, and keeping personal data on the device whenever possible.</p>
+        <p data-i18n="aboutMore" style="margin-bottom:0">Nyangailab is an independent developer in Tokyo. Besides the apps, we make web tools for learning: Science Lab for physics and an English learning app. See the About page for how we work and how to reach us, and the Privacy page for how data is handled.</p>
+      </div>
     </section>
   </main>
 
@@ -106,7 +157,8 @@
       <div>
         <a href="about.html" data-i18n="navAbout">About</a> ・
         <a href="privacy.html" data-i18n="navPrivacy">Privacy</a> ・
-        <a href="#apps" data-i18n="allApps">All apps</a>
+        <a href="#android" data-i18n="allApps">All apps</a> ・
+        <a href="app-ads.txt">app-ads.txt</a>
       </div>
     </div>
   </footer>
@@ -115,88 +167,98 @@
   <script>
     const I18N = {
       en: {
-        navApps: "Apps",
-        navScience: "Science Lab",
+        navAndroid: "Android apps",
+        navWeb: "Web apps",
         navAbout: "About",
         navPrivacy: "Privacy",
         headline: "Small apps and learning tools, made in Tokyo.",
         sub: "Android apps, an English learning web app, and Science Lab — physics you can operate. Simple, privacy‑minded, and made by an independent developer.",
+        secAndroid: "Android apps",
+        secAndroidSub: "Install from Google Play.",
         app1Desc: "A casual block puzzle with cute cats and basic math practice.",
         app2Desc: "A lightweight calculator app with a friendly UI.",
+        secWeb: "Web apps",
+        secWebSub: "Run in your browser — nothing to install.",
         sciTitle: "Science Lab — physics you can operate",
-        sciIntro: "An educational site that lets you move, change and measure natural phenomena in the browser instead of only reading about them. It starts with electromagnetism: from what an electric current really is, through Maxwell's equations, to antennas, lightning and semiconductors.",
-        sciT1: "What electric current really is",
-        sciD1: "Electrons do not simply rush along a wire: an electric field spreads, and the electrons start to move. Compare the speed of light with the speed of the electrons.",
-        sciT2: "Fields spreading as circles (2D and 3D)",
-        sciD2: "Maxwell's equations solved numerically in a cross-section of a wire: when current starts to flow, electric and magnetic fields spread out as circles. A 3D view lets you change the viewpoint and zoom.",
-        sciT3: "Electric field lines and equipotentials",
-        sciD3: "Around two point charges the field lines and equipotential lines always cross at right angles. Change the charge ratio and watch the \"potential landscape\".",
-        sciT4: "Vector calculus (∇, gradient, divergence, curl)",
-        sciD4: "A review of derivatives and integrals, then ∇, gradient, divergence, curl, the Laplacian, the divergence and Stokes theorems, and cylindrical and spherical coordinates — with figures and step-by-step equations. The gradient and curl chapters have 3D figures you can move with the mouse or a finger.",
+        sciIntro: "Move, change and measure natural phenomena in your browser. It starts with electromagnetism.",
+        sciT1: "Moving circuit diagram",
+        sciT2: "Antennas",
+        sciT3: "Fields spreading as circles",
+        sciT4: "Lightning and lightning rods",
+        sciT5: "Electric field lines and equipotentials",
+        sciT6: "Inside a semiconductor",
+        sciT7: "What electric current really is",
+        sciT8: "Vector calculus (∇, gradient, divergence, curl)",
         sciT9: "Maxwell's equations",
-        sciD9: "Gauss's laws for electric and magnetic fields, Faraday's law and the Ampère–Maxwell law (displacement current), with figures, step-by-step equations and numbers. From the four equations we derive the electromagnetic wave equation, the speed of light c = 1/√(μ₀ε₀), and energy conservation (Poynting's theorem).",
-        sciT5: "Antennas",
-        sciD5: "How electrons oscillating in a conductor become radio waves, and how antenna length changes the radiation pattern and radiation resistance.",
-        sciT6: "Lightning and lightning rods",
-        sciD6: "Why the electric field concentrates at a thin tip, and whether it reaches the breakdown threshold of air, computed from an exact solution.",
-        sciT7: "Inside a semiconductor",
-        sciD7: "Electrons and holes in a PN junction, a diode and a transistor, from a one-dimensional drift–diffusion model solved numerically and checked against analytic results.",
-        sciT8: "Circuit editor",
-        sciD8: "Place batteries, AC sources, resistors, capacitors, coils, transformers, diodes and transistors, then see current, voltage, fields and electron motion at the same time.",
+        sciA1: "A circuit diagram in motion: a power plant, transformers and a 100 km transmission line feeding a home",
+        sciA2: "Electric field lines pinching off around an oscillating antenna and travelling outward as radio waves",
+        sciA3: "Electric and magnetic fields spreading as rings around two wires carrying current",
+        sciA4: "A lightning leader coming down toward a lightning rod, with electric field lines and equipotential lines",
+        sciA5: "Electric field lines and equipotential lines around two point charges",
+        sciA6: "Electrons and holes as moving dots on either side of a PN junction",
+        sciA7: "A battery and a bulb joined by two wires, with the electrons in the wires shown as moving dots",
+        sciA8: "A 3D surface with contour lines and an arrow pointing uphill",
+        sciA9: "An electromagnetic wave in 3D: the electric field (red) and the magnetic field (blue) at right angles",
         sciNote: "Science Lab is an early-access (alpha) release. Its pages are labelled as not yet reviewed, and we correct them as we check. The pages are currently written in Japanese.",
         sciCta: "Open the Electromagnetism contents",
         sciHome: "science.nyangailab.com",
+        webappTitle: "English learning web app",
+        webappAlt: "The English learning web app: lessons in vocabulary, phrases, quizzes and more",
+        webappDesc: "No subscription — prepaid, pay only for what you use. 16,000+ words, 7,500+ phrases and 230+ topics, from everyday English to specialist vocabulary.",
+        webappCta: "Visit study.nyangailab.com",
+        webappGlossary: "English vocabulary by field",
+        webappPhrasebook: "English phrases by situation",
         aboutTitle: "About Nyangailab",
         aboutBody: "We build small, delightful Android apps. Our priorities are clarity, low battery usage, and keeping personal data on the device whenever possible.",
         aboutMore: "Nyangailab is an independent developer in Tokyo. Besides the apps, we make web tools for learning: Science Lab for physics and an English learning app. See the About page for how we work and how to reach us, and the Privacy page for how data is handled.",
-        allApps: "All apps",
-        webappTitle: "Also from us: an English learning web app",
-        webappDesc: "No subscription — pay only for what you use. 13,000+ words and phrases across 200+ niche domains, from everyday English to specialist vocabulary.",
-        webappCta: "Visit study.nyangailab.com",
-        webappGlossary: "English vocabulary by field",
-        webappPhrasebook: "English phrases by situation"
+        allApps: "All apps"
       },
       ja: {
-        navApps: "アプリ",
-        navScience: "サイエンスラボ",
+        navAndroid: "Android アプリ",
+        navWeb: "Web アプリ",
         navAbout: "運営者について",
         navPrivacy: "プライバシー",
         headline: "東京から、小さなアプリと学びのツールを。",
         sub: "Android アプリ、英語学習ウェブアプリ、そして動かして確かめる理科のサイエンスラボ。シンプルでプライバシーに配慮したものを、個人で作っています。",
+        secAndroid: "Android アプリ",
+        secAndroidSub: "Google Play からインストールできます。",
         app1Desc: "ねこがかわいいブロックパズル。かんたんな計算練習にも。",
         app2Desc: "軽快で使いやすい電卓アプリです。",
+        secWeb: "Web アプリ",
+        secWebSub: "ブラウザで動きます。インストールは要りません。",
         sciTitle: "サイエンスラボ — 動かして確かめる理科",
-        sciIntro: "自然現象を、読むだけでなく、ブラウザの中で動かし、条件を変え、数字で確かめられる教材のサイトです。いまは電磁気学から。電流の正体から、マクスウェルの方程式、アンテナ、雷、半導体まで進みます。",
-        sciT1: "電流の正体",
-        sciD1: "電子は流れているだけではありません。電場が伝わって、電子が動き出します。光の速さと、電子の速さを見比べます。",
-        sciT2: "場が円になって広がる（2D・3D）",
-        sciD2: "導線の断面で、マクスウェルの方程式を数値でそのまま解きます。電流が流れ始めると、電場と磁場が円になって広がります。3D では、視点とズームを変えられます。",
-        sciT3: "電気力線と等電位線",
-        sciD3: "2 つの点電荷のまわりで、電気力線と等電位線はいつも直交します。電荷の比を変えて、「電位の地形」も見られます。",
-        sciT4: "ベクトル解析（∇・勾配・発散・回転）",
-        sciD4: "微分・積分のおさらいから、∇・勾配・発散・回転・ラプラシアン・ガウスの定理・ストークスの定理・円柱座標と球座標まで、図と、途中を省かない式で説明します。勾配と回転の章には、マウスや指で動かせる 3D の絵があります。",
+        sciIntro: "自然現象を、ブラウザで動かして、変えて、数字で確かめる。いまは電磁気学から。",
+        sciT1: "動く回路図",
+        sciT2: "アンテナ",
+        sciT3: "場が円になって広がる",
+        sciT4: "雷と避雷針",
+        sciT5: "電気力線と等電位線",
+        sciT6: "半導体の中",
+        sciT7: "電流の正体",
+        sciT8: "ベクトル解析（∇・勾配・発散・回転）",
         sciT9: "マクスウェルの方程式",
-        sciD9: "ガウスの法則（電場・磁場）・ファラデーの法則・アンペール・マクスウェルの法則（変位電流）を、図と、途中を省かない式と数値で説明します。4 つの式から、電磁波の波動方程式と、光の速さ c = 1/√(μ₀ε₀)、エネルギーの保存（ポインティングの定理）を導きます。",
-        sciT5: "アンテナ",
-        sciD5: "導線の中で振動する電子が、どのように電波になるか。アンテナの長さで、放射パターンと放射抵抗がどう変わるか。",
-        sciT6: "雷と避雷針",
-        sciD6: "先が細いと電場が集まる理由と、空気の破壊の目安に届くかを、厳密な解から計算して確かめます。",
-        sciT7: "半導体の中",
-        sciD7: "PN 接合・ダイオード・トランジスタの中の電子と正孔の動きを、1 次元のドリフト拡散モデルの数値解で見ます。解析解と照らして検算しています。",
-        sciT8: "回路エディタ",
-        sciD8: "電池・交流電源・抵抗・コンデンサ・コイル・変圧器・ダイオード・トランジスタを並べて、電流・電圧・場・電子の動きを同時に見られます。",
+        sciA1: "動く回路図: 発電所・変圧器・100 km の送電線から家庭まで",
+        sciA2: "振動するアンテナのまわりで、電気力線の輪がちぎれ、電波になって外へ広がる様子",
+        sciA3: "電流が流れる 2 本の導線のまわりに、電場と磁場が輪になって広がる様子",
+        sciA4: "避雷針へ降りてくる雷のリーダーと、電気力線・等電位線",
+        sciA5: "2 つの点電荷のまわりの電気力線と等電位線",
+        sciA6: "PN 接合の両側を動く電子と正孔（粒）",
+        sciA7: "電池と電球を 2 本の導線でつないだ回路。導線の中の電子が、動く点で見える",
+        sciA8: "等高線のある 3D の山と、上り坂の向きを示す矢印",
+        sciA9: "3D の電磁波: 電場（赤）と磁場（青）が直角に振動する",
         sciNote: "サイエンスラボは先行公開（α版）です。各ページに「未レビュー」と表示していて、確認しながら直しています。ページは、いまのところ日本語です。",
         sciCta: "電磁気学の目次を開く",
         sciHome: "science.nyangailab.com",
+        webappTitle: "英語学習ウェブアプリ",
+        webappAlt: "英語学習ウェブアプリ: 単語・フレーズ・クイズなどで学べる",
+        webappDesc: "サブスク不要、使った分だけのポイント制。16,000 語以上・7,500 フレーズ以上・230 トピック以上。日常英語から専門語彙まで。",
+        webappCta: "study.nyangailab.com を見る",
+        webappGlossary: "分野別 英単語・用語集",
+        webappPhrasebook: "シーン別 英語フレーズ集",
         aboutTitle: "Nyangailab について",
         aboutBody: "小さくて心地よい Android アプリを作っています。わかりやすさ、省電力、そして可能な限り個人データを端末内に保つことを大切にしています。",
         aboutMore: "Nyangailab は、東京の個人開発者です。アプリのほかに、学びのためのウェブのツールとして、理科のサイエンスラボと、英語学習アプリを作っています。仕事の進め方と連絡先は「運営者について」、データの扱いは「プライバシー」をご覧ください。",
-        allApps: "すべてのアプリ",
-        webappTitle: "英語学習ウェブアプリもやっています",
-        webappDesc: "サブスク不要、使った分だけのポイント制。200分野以上・13,000語以上の単語・フレーズに対応、日常英語からニッチな専門語彙まで。",
-        webappCta: "study.nyangailab.com を見る",
-        webappGlossary: "分野別 英単語・用語集",
-        webappPhrasebook: "シーン別 英語フレーズ集"
+        allApps: "すべてのアプリ"
       }
     };
 
@@ -207,6 +269,10 @@
       $$('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (dict[key]) el.textContent = dict[key];
+      });
+      $$('[data-i18n-alt]').forEach(el => {
+        const key = el.getAttribute('data-i18n-alt');
+        if (dict[key]) el.setAttribute('alt', dict[key]);
       });
     }
 
