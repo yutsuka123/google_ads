@@ -5,41 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-adsense-account" content="ca-pub-8905534727976250">
   <title>Nyangailab — Developer Page</title>
-  <meta name="description" content="Nyangailab official developer page. Android apps, links, and contact. Bilingual (EN/日本語)." />
-  <style>
-    :root { --bg:#0b0f14; --card:#121821; --muted:#9bb0c3; --accent:#4bb3fd; --text:#e8f0ff; }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; color:var(--text); background:radial-gradient(1200px 800px at 80% -10%, #1a2330, #0b0f14);}
-    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:rgba(11,15,20,.6); border-bottom:1px solid rgba(255,255,255,.06); z-index:10}
-    .container{max-width:980px; margin:0 auto; padding:20px}
-    .row{display:flex; align-items:center; justify-content:space-between; gap:16px}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.3px}
-    .brand i{width:28px; height:28px; background:linear-gradient(135deg,#4bb3fd,#6de39f); border-radius:8px; display:inline-block}
-    .lang{display:flex; align-items:center; gap:8px}
-    select{appearance:none; background:var(--card); color:var(--text); border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:10px 14px; font-size:14px}
-    main{padding:40px 20px}
-    .hero{max-width:980px; margin:0 auto 24px; display:grid; gap:10px}
-    .hero h1{font-size:32px; margin:0}
-    .hero p{color:var(--muted); margin:0}
-    .apps{max-width:980px; margin:24px auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04)); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    .card h3{margin:0 0 8px}
-    .card p{margin:0 0 12px; color:var(--muted)}
-    .actions{display:flex; gap:10px; flex-wrap:wrap}
-    .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); text-decoration:none; color:var(--text)}
-    .btn.primary{background:linear-gradient(135deg,#4bb3fd,#6de39f); color:#001018; font-weight:600; border:none}
-    footer{border-top:1px solid rgba(255,255,255,.08); margin-top:40px}
-    footer .container{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px}
-    .small{color:var(--muted); font-size:13px}
-    .grid-2{display:grid; grid-template-columns:1fr; gap:16px}
-    @media(min-width:720px){ .grid-2{grid-template-columns:1.2fr .8fr} .hero h1{font-size:40px} }
-  </style>
+  <meta name="description" content="Nyangailab: Android apps, an English learning web app, and Science Lab — interactive physics simulations, starting with electromagnetism. Bilingual (EN/日本語)." />
+  <link rel="stylesheet" href="site.css" />
 </head>
 <body>
   <header>
     <div class="container row">
-      <div class="brand"><i></i> <span>Nyangailab</span></div>
+      <a class="brand" href="./"><i></i> <span>Nyangailab</span></a>
+      <nav class="nav">
+        <a href="#apps" data-i18n="navApps">Apps</a>
+        <a href="#science" data-i18n="navScience">Science Lab</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="privacy.html" data-i18n="navPrivacy">Privacy</a>
+      </nav>
       <div class="lang">
         <label for="lang" id="label-language" class="small">Language</label>
         <select id="lang" aria-label="Language selector">
@@ -51,17 +29,12 @@
   </header>
 
   <main>
-    <section class="hero grid-2">
-      <div>
-        <h1 data-i18n="headline">Now releasing apps on Google Play.</h1>
-        <p data-i18n="sub">Simple, privacy‑minded tools and casual games from Tokyo.</p>
-      </div>
-      <div class="small" style="align-self:end">
-        <div><span data-i18n="statusTitle" style="font-weight:600">Release status</span> —— <span data-i18n="status">Now releasing</span></div>
-      </div>
+    <section class="hero">
+      <h1 data-i18n="headline">Small apps and learning tools, made in Tokyo.</h1>
+      <p data-i18n="sub">Android apps, an English learning web app, and Science Lab — physics you can operate. Simple, privacy‑minded, and made by an independent developer.</p>
     </section>
 
-    <section class="apps">
+    <section class="apps" id="apps">
       <article class="card">
         <h3>Cat Math Block</h3>
         <p data-i18n="app1Desc">A casual block puzzle with cute cats and basic math practice.</p>
@@ -80,7 +53,37 @@
       </article>
     </section>
 
-    <section class="card" style="max-width:980px; margin:24px auto; border-color:rgba(75,179,253,.35);">
+    <section class="card wide" id="science" style="border-color:rgba(109,227,159,.35);">
+      <h3 data-i18n="sciTitle" style="margin-top:0">Science Lab — physics you can operate</h3>
+      <p data-i18n="sciIntro">An educational site that lets you move, change and measure natural phenomena in the browser instead of only reading about them. It starts with electromagnetism: from what an electric current really is, through Maxwell's equations, to antennas, lightning and semiconductors.</p>
+      <ul class="topics">
+        <li><a href="https://science.nyangailab.com/physics/em/current/" target="_blank" rel="noopener" data-i18n="sciT1">What electric current really is</a>
+          <span data-i18n="sciD1">Electrons do not simply rush along a wire: an electric field spreads, and the electrons start to move. Compare the speed of light with the speed of the electrons.</span></li>
+        <li><a href="https://science.nyangailab.com/physics/em/current/view2d.html" target="_blank" rel="noopener" data-i18n="sciT2">Fields spreading as circles (2D and 3D)</a>
+          <span data-i18n="sciD2">Maxwell's equations solved numerically in a cross-section of a wire: when current starts to flow, electric and magnetic fields spread out as circles. A 3D view lets you change the viewpoint and zoom.</span></li>
+        <li><a href="https://science.nyangailab.com/physics/em/current/static.html" target="_blank" rel="noopener" data-i18n="sciT3">Electric field lines and equipotentials</a>
+          <span data-i18n="sciD3">Around two point charges the field lines and equipotential lines always cross at right angles. Change the charge ratio and watch the "potential landscape".</span></li>
+        <li><a href="https://science.nyangailab.com/physics/em/current/vector.html" target="_blank" rel="noopener" data-i18n="sciT4">Vector calculus (∇, gradient, divergence, curl)</a>
+          <span data-i18n="sciD4">A review of derivatives and integrals, then ∇, gradient, divergence, curl, the Laplacian, the divergence and Stokes theorems, and cylindrical and spherical coordinates — with figures and step-by-step equations. The gradient and curl chapters have 3D figures you can move with the mouse or a finger.</span></li>
+        <li><a href="https://science.nyangailab.com/physics/em/current/maxwell.html" target="_blank" rel="noopener" data-i18n="sciT9">Maxwell's equations</a>
+          <span data-i18n="sciD9">Gauss's laws for electric and magnetic fields, Faraday's law and the Ampère–Maxwell law (displacement current), with figures, step-by-step equations and numbers. From the four equations we derive the electromagnetic wave equation, the speed of light c = 1/√(μ₀ε₀), and energy conservation (Poynting's theorem).</span></li>
+        <li><a href="https://science.nyangailab.com/physics/em/current/antenna.html" target="_blank" rel="noopener" data-i18n="sciT5">Antennas</a>
+          <span data-i18n="sciD5">How electrons oscillating in a conductor become radio waves, and how antenna length changes the radiation pattern and radiation resistance.</span></li>
+        <li><a href="https://science.nyangailab.com/physics/em/current/lightning.html" target="_blank" rel="noopener" data-i18n="sciT6">Lightning and lightning rods</a>
+          <span data-i18n="sciD6">Why the electric field concentrates at a thin tip, and whether it reaches the breakdown threshold of air, computed from an exact solution.</span></li>
+        <li><a href="https://science.nyangailab.com/physics/em/current/semicon.html" target="_blank" rel="noopener" data-i18n="sciT7">Inside a semiconductor</a>
+          <span data-i18n="sciD7">Electrons and holes in a PN junction, a diode and a transistor, from a one-dimensional drift–diffusion model solved numerically and checked against analytic results.</span></li>
+        <li><a href="https://science.nyangailab.com/physics/em/current/circuitlab.html" target="_blank" rel="noopener" data-i18n="sciT8">Circuit editor</a>
+          <span data-i18n="sciD8">Place batteries, AC sources, resistors, capacitors, coils, transformers, diodes and transistors, then see current, voltage, fields and electron motion at the same time.</span></li>
+      </ul>
+      <p class="note" data-i18n="sciNote">Science Lab is an early-access (alpha) release. Its pages are labelled as not yet reviewed, and we correct them as we check. The pages are currently written in Japanese.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://science.nyangailab.com/physics/em/index.html" target="_blank" rel="noopener" data-i18n="sciCta">Open the Electromagnetism contents</a>
+        <a class="btn" href="https://science.nyangailab.com/" target="_blank" rel="noopener" data-i18n="sciHome">science.nyangailab.com</a>
+      </div>
+    </section>
+
+    <section class="card wide" style="border-color:rgba(75,179,253,.35);">
       <h3 data-i18n="webappTitle" style="margin-top:0">Also from us: an English learning web app</h3>
       <p data-i18n="webappDesc">No subscription — pay only for what you use. 13,000+ words and phrases across 200+ niche domains, from everyday English to specialist vocabulary.</p>
       <div class="actions">
@@ -90,9 +93,10 @@
       </div>
     </section>
 
-    <section class="card" style="max-width:980px; margin:0 auto;">
+    <section class="card wide">
       <h3 data-i18n="aboutTitle" style="margin-top:0">About Nyangailab</h3>
       <p data-i18n="aboutBody">We build small, delightful Android apps. Our priorities are clarity, low battery usage, and keeping personal data on the device whenever possible.</p>
+      <p data-i18n="aboutMore" style="margin-bottom:0">Nyangailab is an independent developer in Tokyo. Besides the apps, we make web tools for learning: Science Lab for physics and an English learning app. See the About page for how we work and how to reach us, and the Privacy page for how data is handled.</p>
     </section>
   </main>
 
@@ -100,22 +104,51 @@
     <div class="container small">
       <div>© <span id="year"></span> Nyangailab</div>
       <div>
-        <a class="small" href="https://play.google.com/store/apps/dev?id=YOUR_DEVELOPER_ID" target="_blank" rel="noopener" data-i18n="allApps">All apps</a>
+        <a href="about.html" data-i18n="navAbout">About</a> ・
+        <a href="privacy.html" data-i18n="navPrivacy">Privacy</a> ・
+        <a href="#apps" data-i18n="allApps">All apps</a>
       </div>
     </div>
   </footer>
 
+  <script src="site.js"></script>
   <script>
     const I18N = {
       en: {
-        headline: "Now releasing apps on Google Play.",
-        sub: "Simple, privacy‑minded tools and casual games from Tokyo.",
-        status: "Now releasing",
-        statusTitle: "Release status",
+        navApps: "Apps",
+        navScience: "Science Lab",
+        navAbout: "About",
+        navPrivacy: "Privacy",
+        headline: "Small apps and learning tools, made in Tokyo.",
+        sub: "Android apps, an English learning web app, and Science Lab — physics you can operate. Simple, privacy‑minded, and made by an independent developer.",
         app1Desc: "A casual block puzzle with cute cats and basic math practice.",
         app2Desc: "A lightweight calculator app with a friendly UI.",
+        sciTitle: "Science Lab — physics you can operate",
+        sciIntro: "An educational site that lets you move, change and measure natural phenomena in the browser instead of only reading about them. It starts with electromagnetism: from what an electric current really is, through Maxwell's equations, to antennas, lightning and semiconductors.",
+        sciT1: "What electric current really is",
+        sciD1: "Electrons do not simply rush along a wire: an electric field spreads, and the electrons start to move. Compare the speed of light with the speed of the electrons.",
+        sciT2: "Fields spreading as circles (2D and 3D)",
+        sciD2: "Maxwell's equations solved numerically in a cross-section of a wire: when current starts to flow, electric and magnetic fields spread out as circles. A 3D view lets you change the viewpoint and zoom.",
+        sciT3: "Electric field lines and equipotentials",
+        sciD3: "Around two point charges the field lines and equipotential lines always cross at right angles. Change the charge ratio and watch the \"potential landscape\".",
+        sciT4: "Vector calculus (∇, gradient, divergence, curl)",
+        sciD4: "A review of derivatives and integrals, then ∇, gradient, divergence, curl, the Laplacian, the divergence and Stokes theorems, and cylindrical and spherical coordinates — with figures and step-by-step equations. The gradient and curl chapters have 3D figures you can move with the mouse or a finger.",
+        sciT9: "Maxwell's equations",
+        sciD9: "Gauss's laws for electric and magnetic fields, Faraday's law and the Ampère–Maxwell law (displacement current), with figures, step-by-step equations and numbers. From the four equations we derive the electromagnetic wave equation, the speed of light c = 1/√(μ₀ε₀), and energy conservation (Poynting's theorem).",
+        sciT5: "Antennas",
+        sciD5: "How electrons oscillating in a conductor become radio waves, and how antenna length changes the radiation pattern and radiation resistance.",
+        sciT6: "Lightning and lightning rods",
+        sciD6: "Why the electric field concentrates at a thin tip, and whether it reaches the breakdown threshold of air, computed from an exact solution.",
+        sciT7: "Inside a semiconductor",
+        sciD7: "Electrons and holes in a PN junction, a diode and a transistor, from a one-dimensional drift–diffusion model solved numerically and checked against analytic results.",
+        sciT8: "Circuit editor",
+        sciD8: "Place batteries, AC sources, resistors, capacitors, coils, transformers, diodes and transistors, then see current, voltage, fields and electron motion at the same time.",
+        sciNote: "Science Lab is an early-access (alpha) release. Its pages are labelled as not yet reviewed, and we correct them as we check. The pages are currently written in Japanese.",
+        sciCta: "Open the Electromagnetism contents",
+        sciHome: "science.nyangailab.com",
         aboutTitle: "About Nyangailab",
         aboutBody: "We build small, delightful Android apps. Our priorities are clarity, low battery usage, and keeping personal data on the device whenever possible.",
+        aboutMore: "Nyangailab is an independent developer in Tokyo. Besides the apps, we make web tools for learning: Science Lab for physics and an English learning app. See the About page for how we work and how to reach us, and the Privacy page for how data is handled.",
         allApps: "All apps",
         webappTitle: "Also from us: an English learning web app",
         webappDesc: "No subscription — pay only for what you use. 13,000+ words and phrases across 200+ niche domains, from everyday English to specialist vocabulary.",
@@ -124,14 +157,40 @@
         webappPhrasebook: "English phrases by situation"
       },
       ja: {
-        headline: "Google Play にて公開中です。",
-        sub: "シンプルでプライバシーに配慮したツールと、気軽に楽しめるゲームを東京から。",
-        status: "只今リリース中",
-        statusTitle: "ステータス",
+        navApps: "アプリ",
+        navScience: "サイエンスラボ",
+        navAbout: "運営者について",
+        navPrivacy: "プライバシー",
+        headline: "東京から、小さなアプリと学びのツールを。",
+        sub: "Android アプリ、英語学習ウェブアプリ、そして動かして確かめる理科のサイエンスラボ。シンプルでプライバシーに配慮したものを、個人で作っています。",
         app1Desc: "ねこがかわいいブロックパズル。かんたんな計算練習にも。",
         app2Desc: "軽快で使いやすい電卓アプリです。",
+        sciTitle: "サイエンスラボ — 動かして確かめる理科",
+        sciIntro: "自然現象を、読むだけでなく、ブラウザの中で動かし、条件を変え、数字で確かめられる教材のサイトです。いまは電磁気学から。電流の正体から、マクスウェルの方程式、アンテナ、雷、半導体まで進みます。",
+        sciT1: "電流の正体",
+        sciD1: "電子は流れているだけではありません。電場が伝わって、電子が動き出します。光の速さと、電子の速さを見比べます。",
+        sciT2: "場が円になって広がる（2D・3D）",
+        sciD2: "導線の断面で、マクスウェルの方程式を数値でそのまま解きます。電流が流れ始めると、電場と磁場が円になって広がります。3D では、視点とズームを変えられます。",
+        sciT3: "電気力線と等電位線",
+        sciD3: "2 つの点電荷のまわりで、電気力線と等電位線はいつも直交します。電荷の比を変えて、「電位の地形」も見られます。",
+        sciT4: "ベクトル解析（∇・勾配・発散・回転）",
+        sciD4: "微分・積分のおさらいから、∇・勾配・発散・回転・ラプラシアン・ガウスの定理・ストークスの定理・円柱座標と球座標まで、図と、途中を省かない式で説明します。勾配と回転の章には、マウスや指で動かせる 3D の絵があります。",
+        sciT9: "マクスウェルの方程式",
+        sciD9: "ガウスの法則（電場・磁場）・ファラデーの法則・アンペール・マクスウェルの法則（変位電流）を、図と、途中を省かない式と数値で説明します。4 つの式から、電磁波の波動方程式と、光の速さ c = 1/√(μ₀ε₀)、エネルギーの保存（ポインティングの定理）を導きます。",
+        sciT5: "アンテナ",
+        sciD5: "導線の中で振動する電子が、どのように電波になるか。アンテナの長さで、放射パターンと放射抵抗がどう変わるか。",
+        sciT6: "雷と避雷針",
+        sciD6: "先が細いと電場が集まる理由と、空気の破壊の目安に届くかを、厳密な解から計算して確かめます。",
+        sciT7: "半導体の中",
+        sciD7: "PN 接合・ダイオード・トランジスタの中の電子と正孔の動きを、1 次元のドリフト拡散モデルの数値解で見ます。解析解と照らして検算しています。",
+        sciT8: "回路エディタ",
+        sciD8: "電池・交流電源・抵抗・コンデンサ・コイル・変圧器・ダイオード・トランジスタを並べて、電流・電圧・場・電子の動きを同時に見られます。",
+        sciNote: "サイエンスラボは先行公開（α版）です。各ページに「未レビュー」と表示していて、確認しながら直しています。ページは、いまのところ日本語です。",
+        sciCta: "電磁気学の目次を開く",
+        sciHome: "science.nyangailab.com",
         aboutTitle: "Nyangailab について",
         aboutBody: "小さくて心地よい Android アプリを作っています。わかりやすさ、省電力、そして可能な限り個人データを端末内に保つことを大切にしています。",
+        aboutMore: "Nyangailab は、東京の個人開発者です。アプリのほかに、学びのためのウェブのツールとして、理科のサイエンスラボと、英語学習アプリを作っています。仕事の進め方と連絡先は「運営者について」、データの扱いは「プライバシー」をご覧ください。",
         allApps: "すべてのアプリ",
         webappTitle: "英語学習ウェブアプリもやっています",
         webappDesc: "サブスク不要、使った分だけのポイント制。200分野以上・13,000語以上の単語・フレーズに対応、日常英語からニッチな専門語彙まで。",
@@ -141,7 +200,6 @@
       }
     };
 
-    const $ = (s, root=document) => root.querySelector(s);
     const $$ = (s, root=document) => Array.from(root.querySelectorAll(s));
 
     function applyLang(lang){
@@ -150,28 +208,9 @@
         const key = el.getAttribute('data-i18n');
         if (dict[key]) el.textContent = dict[key];
       });
-      $('#label-language').textContent = lang === 'ja' ? '言語' : 'Language';
-      document.documentElement.lang = lang;
-      localStorage.setItem('nyangailab.lang', lang);
     }
 
-    function detectLang(){
-      const langs = (navigator.languages && navigator.languages.length)
-        ? navigator.languages
-        : [navigator.language || navigator.userLanguage || 'en'];
-      for (const l of langs) {
-        if (/^ja/i.test(l)) return 'ja';
-      }
-      return 'en';
-    }
-
-    const saved = localStorage.getItem('nyangailab.lang');
-    const initial = saved || detectLang();
-    $('#lang').value = initial;
-    applyLang(initial);
-    $('#lang').addEventListener('change', (e)=> applyLang(e.target.value));
-
-    $('#year').textContent = new Date().getFullYear();
+    NyLang.init(applyLang);
   </script>
 </body>
 </html>
